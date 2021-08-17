@@ -5,24 +5,24 @@
   },
   "generators": {
     "@nrwl/angular:application": {
+      "style": "scss",
+      "linter": "eslint",
+      "unitTestRunner": "jest",
       "e2eTestRunner": "cypress",
       "inlineStyle": false,
       "inlineTemplate": false,
-      "linter": "eslint",
       "prefix": "nrg",
       "skipTests": true,
       "strict": true,
-      "style": "scss",
       "tags": "type:app",
-      "unitTestRunner": "jest",
       "viewEncapsulation": "None"
     },
     "@nrwl/angular:library": {
-      "linter": "eslint",
-      "prefix": "nrg",
-      "strict": true,
       "style": "scss",
-      "unitTestRunner": "jest"
+      "linter": "eslint",
+      "unitTestRunner": "jest",
+      "prefix": "nrg",
+      "strict": true
     },
     "@nrwl/angular:component": {
       "style": "scss",
@@ -32,6 +32,31 @@
   },
   "defaultProject": "energy-insights-app",
   "projects": {
+    "co2-data-access": {
+      "projectType": "library",
+      "root": "libs/co2/data-access",
+      "sourceRoot": "libs/co2/data-access/src",
+      "prefix": "nrg",
+      "targets": {
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/co2/data-access"],
+          "options": {
+            "jestConfig": "libs/co2/data-access/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/co2/data-access/src/**/*.ts",
+              "libs/co2/data-access/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
     "energy-insights-app": {
       "projectType": "application",
       "root": "apps/energy-insights-app",

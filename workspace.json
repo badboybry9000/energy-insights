@@ -29,6 +29,7 @@
       "displayBlock": true
     }
   },
+  "defaultProject": "energy-insights-app",
   "projects": {
     "energy-insights-app": {
       "projectType": "application",
@@ -149,6 +150,5 @@
         }
       }
     }
-  },
-  "defaultProject": "energy-insights-app"
+  }
 }

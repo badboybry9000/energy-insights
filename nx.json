@@ -12,9 +12,15 @@
   },
   "tasksRunnerOptions": {
     "default": {
-      "runner": "@nrwl/workspace/tasks-runners/default",
+      "runner": "@nrwl/nx-cloud",
       "options": {
-        "cacheableOperations": ["build", "lint", "test", "e2e"]
+        "cacheableOperations": [
+          "build",
+          "lint",
+          "test",
+          "e2e"
+        ],
+        "accessToken": "NDVmNDYzYzMtYjM4ZC00YmY2LWFiN2UtYzhhOWU2OTI0Y2NhfHJlYWQtd3JpdGU="
       }
     }
   },
@@ -28,11 +34,15 @@
   },
   "projects": {
     "energy-insights-app": {
-      "tags": ["type:app"]
+      "tags": [
+        "type:app"
+      ]
     },
     "energy-insights-app-e2e": {
       "tags": [],
-      "implicitDependencies": ["energy-insights-app"]
+      "implicitDependencies": [
+        "energy-insights-app"
+      ]
     }
   }
 }

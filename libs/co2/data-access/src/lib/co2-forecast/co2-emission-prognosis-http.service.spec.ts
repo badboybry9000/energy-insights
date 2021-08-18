@@ -2,7 +2,7 @@ import { TestBed } from '@angular/core/testing';
 
 import { Co2EmissionPrognosisHttp } from './co2-emission-prognosis-http.service'
 
-describe('', () => {
+describe(Co2EmissionPrognosisHttp.name, () => {
 
   beforeEach(() => {
     http = TestBed.inject(Co2EmissionPrognosisHttp);

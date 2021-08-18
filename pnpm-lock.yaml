@@ -15,6 +15,7 @@ specifiers:
   '@angular/platform-browser': ~12.1.0
   '@angular/platform-browser-dynamic': ~12.1.0
   '@angular/router': ~12.1.0
+  '@ngrx/component-store': ^12.4.0
   '@nrwl/angular': ~12.7.1
   '@nrwl/cli': ~12.7.1
   '@nrwl/cypress': ~12.7.1
@@ -52,6 +53,7 @@ dependencies:
   '@angular/platform-browser': 12.1.5_e484ae13dc87c6c09683a80ada7d62e3
   '@angular/platform-browser-dynamic': 12.1.5_78eac561215971802d68ab8c9f465231
   '@angular/router': 12.1.5_1135d6cdbaede2853ed61d07cc14cec5
+  '@ngrx/component-store': 12.4.0_@angular+core@12.1.5+rxjs@6.6.7
   '@nrwl/angular': 12.7.2_957fd88a9dac8fd691c7997311cf8cff
   rxjs: 6.6.7
   tslib: 2.3.1
@@ -2730,6 +2732,17 @@ packages:
       - supports-color
     dev: true
 
+  /@ngrx/component-store/12.4.0_@angular+core@12.1.5+rxjs@6.6.7:
+    resolution: {integrity: sha512-qB4qcrAeHgNdQC1x0Q1rAcuD0KPMZ0PSQzGlZCv+BYXJAj08XIGcnN34ATALUlvxgKLroLd3lhXWeMZc8PLSNA==}
+    peerDependencies:
+      '@angular/core': ^12.0.0
+      rxjs: ^6.5.3
+    dependencies:
+      '@angular/core': 12.1.5_rxjs@6.6.7+zone.js@0.11.4
+      rxjs: 6.6.7
+      tslib: 2.3.1
+    dev: false
+
   /@ngtools/webpack/12.1.4_3bbc07e0959e8e8ac5c44c9fb6bb2db1:
     resolution: {integrity: sha512-hXc8dTnRfDB7o1Pd7a07aw0rjGmVLXU28+cTHQJliosgD3obcjfZ4QPA0k97vlQMtqVJawuShRfyiUKrpsJf8Q==}
     engines: {node: ^12.14.1 || >=14.0.0, npm: ^6.11.0 || ^7.5.6, yarn: '>= 1.13.0'}
@@ -3896,7 +3909,7 @@ packages:
   /axios/0.21.1:
     resolution: {integrity: sha512-dKQiRHxGD9PPRIUNIWvZhPTPpl1rf/OxTYKsqKUDjBwYylTvV7SjSHJb9ratfyzM6wCdLCOYLzs73qpg5c4iGA==}
     dependencies:
-      follow-redirects: 1.14.1_debug@4.3.2
+      follow-redirects: 1.14.1
     transitivePeerDependencies:
       - debug
     dev: true
@@ -6146,7 +6159,7 @@ packages:
       inherits: 2.0.4
       readable-stream: 2.3.7
 
-  /follow-redirects/1.14.1_debug@4.3.2:
+  /follow-redirects/1.14.1:
     resolution: {integrity: sha512-HWqDgT7ZEkqRzBvc2s64vSZ/hfOceEol3ac/7tKwzuvEyWx3/4UegXh5oBOIotkGsObyk3xznnSRVADBgWSQVg==}
     engines: {node: '>=4.0'}
     peerDependencies:
@@ -6154,8 +6167,6 @@ packages:
     peerDependenciesMeta:
       debug:
         optional: true
-    dependencies:
-      debug: 4.3.2_supports-color@6.1.0
     dev: true
 
   /for-in/1.0.2:
@@ -6618,7 +6629,7 @@ packages:
     engines: {node: '>=8.0.0'}
     dependencies:
       eventemitter3: 4.0.7
-      follow-redirects: 1.14.1_debug@4.3.2
+      follow-redirects: 1.14.1
       requires-port: 1.0.0
     transitivePeerDependencies:
       - debug

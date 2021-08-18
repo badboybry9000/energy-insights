@@ -16,7 +16,8 @@
     "baseUrl": ".",
     "paths": {
       "@energy-insights/co2/data-access": ["libs/co2/data-access/src/index.ts"]
-    }
+    },
+    "preserveSymlinks": true
   },
   "exclude": ["node_modules", "tmp"]
 }
